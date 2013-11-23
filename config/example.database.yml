@@ -2,7 +2,7 @@
 development:
   adapter: postgresql
   database: deployr_development
-  username: kevinjasker
+  username: postgres
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -10,5 +10,5 @@ development:
 test:
   adapter: postgresql
   database: deployr_test
-  username: kevinjasker
+  username: postgres
 
