@@ -6,15 +6,19 @@ gem 'rails', '4.0.0'
 gem 'pg'
 gem 'rails_serve_static_assets'
 
+gem 'haml-rails'
 gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
 gem 'jquery-rails'
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                              :github => 'anjlab/bootstrap-rails'
 
 gem 'batman-rails'
 
 group :development do 
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'rspec-rails'
 end
 
