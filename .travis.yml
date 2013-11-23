@@ -18,3 +18,6 @@ before_script:
 - bundle exec rake db:migrate
 - bundle exec rake --trace db:test:prepare
 script: bundle exec rake spec
+notifications:
+  webhooks:
+  - http://deployr.herokuapp.com/webhooks/travis

@@ -1,5 +1,6 @@
 Deployr::Application.routes.draw do
 
+  get "webhooks/travis"
   get "(*redirect_path)", to: "batman#index", constraints: lambda { |request| request.format == "text/html" }
 
   # The priority is based upon order of creation:
