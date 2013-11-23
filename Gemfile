@@ -20,6 +20,9 @@ gem 'batman-rails'
 
 gem 'protected_attributes'
 gem 'honeybadger'
+gem 'github_api'
+gem 'heroku'
+gem 'heroku-api'
 
 group :development, :test do
   gem 'better_errors'
