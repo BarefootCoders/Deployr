@@ -23,6 +23,7 @@ gem 'honeybadger'
 gem 'github_api'
 gem 'heroku'
 gem 'heroku-api'
+gem 'sshkey'
 
 group :development, :test do
   gem 'better_errors'

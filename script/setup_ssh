@@ -1,0 +1,5 @@
+# Generate ssh keypair
+# Add to Heroku, Github
+
+echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+echo -e "Host heroku.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
