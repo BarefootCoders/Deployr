@@ -16,20 +16,9 @@
 Batman.config.pathToHTML = '/assets/html'
 
 class Deployr extends Batman.App
-  # @resources 'products'
-  # @resources 'discounts', except: ['edit']
-  # @resources 'customers', only: ['new', 'show']
 
-  # @resources 'blogs', ->
-  #   @resources 'articles'
+  @resources 'projects'
 
-  # @resources 'pages', ->
-  #   @collection 'count'
-  #   @member 'duplicate'
-
-  # @route 'apps', 'apps#index'
-  # @route 'apps/private', 'apps#private', as: 'privateApps'
-
-  @root 'main#index'
+  @root 'projects#index'
 
 (global ? window).Deployr = Deployr

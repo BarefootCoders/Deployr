@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131123162725) do
+ActiveRecord::Schema.define(version: 20131123214605) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20131123162725) do
     t.datetime "updated_at"
     t.string   "travis_token"
     t.string   "github_token"
+    t.string   "heroku_token"
   end
 
   create_table "workspaces", force: true do |t|
