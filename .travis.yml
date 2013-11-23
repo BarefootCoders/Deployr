@@ -1,0 +1,20 @@
+language: ruby
+cache: bundler
+rvm:
+- 2.1.0
+gemfile:
+- Gemfile
+services:
+- postgresql
+before_install:
+- cp config/example.database.yml config/database.yml
+env:
+  global:
+    - DB=postgresql
+before_script:
+- psql -c 'create database deployr_development;' -U postgres
+- psql -c 'create database deployr_test;' -U postgres
+- bundle exec rake --trace db:schema:load
+- bundle exec rake db:migrate
+- bundle exec rake --trace db:test:prepare
+script: bundle exec rake spec

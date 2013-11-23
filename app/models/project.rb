@@ -1,5 +1,6 @@
 class Project < ActiveRecord::Base
   attr_accessible :deploy_public_key, :github_repo, :deploy_repo, :user_id, :travis_token, :github_token
+  validates_uniqueness_of :github_repo
 
   has_many :builds, dependent: :destroy
 
@@ -19,8 +20,8 @@ class Project < ActiveRecord::Base
   private
   
   def travis_project
-    Travis::Pro.access_token = self.travis_token
-    Travis::Pro::Repository.find(github_repo.gsub('git@github.com:', ''))
+    Travis.access_token = self.travis_token
+    Travis::Repository.find(github_repo.gsub('git@github.com:', ''))
   end
 
   def missing_builds
