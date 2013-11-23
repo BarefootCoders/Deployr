@@ -1,0 +1,1 @@
+class Deployr.ApplicationController extends Batman.Controller
