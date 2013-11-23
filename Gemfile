@@ -14,8 +14,11 @@ gem 'jquery-rails'
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :github => 'anjlab/bootstrap-rails'
 gem 'travis'
+gem 'git'
 
 gem 'batman-rails'
+
+gem 'protected_attributes'
 
 group :development, :test do
   gem 'better_errors'
