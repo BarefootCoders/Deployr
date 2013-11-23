@@ -11,9 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20131123160941) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "builds", force: true do |t|
+    t.integer  "project_id"
+    t.boolean  "deployed"
+    t.string   "branch_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "projects", force: true do |t|
+    t.integer  "user_id"
+    t.string   "github_repo"
+    t.string   "deploy_repo"
+    t.text     "deploy_public_key"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "travis_token"
+    t.string   "github_token"
+  end
+
+  create_table "workspaces", force: true do |t|
+    t.text     "path"
+    t.string   "status"
+    t.integer  "build_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
