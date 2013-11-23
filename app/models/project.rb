@@ -35,7 +35,6 @@ class Project < ActiveRecord::Base
   def add_key_to_heroku!
     heroku = Heroku::API.new(api_key: heroku_token)
     heroku.post_key(self.deploy_public_key)
-    heroku.post_key()
   end
 
   private
