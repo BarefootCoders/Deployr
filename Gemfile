@@ -13,13 +13,19 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :github => 'anjlab/bootstrap-rails'
+gem 'travis'
 
 gem 'batman-rails'
 
-group :development do 
+group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rspec-rails'
+  gem 'pry'
+end
+
+group :test do
+  gem 'webmock'
 end
 
 # To use ActiveModel has_secure_password
