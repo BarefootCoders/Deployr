@@ -19,6 +19,7 @@ gem 'git'
 gem 'batman-rails'
 
 gem 'protected_attributes'
+gem 'honeybadger'
 
 group :development, :test do
   gem 'better_errors'
