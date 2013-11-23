@@ -1,5 +1,5 @@
 class WebhooksController < ApplicationController
   def travis
-    raise params.inspect
+    Project.find_each(&:fetch_builds!)
   end
 end
