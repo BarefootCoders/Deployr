@@ -6,16 +6,16 @@ gem 'rails', '4.0.0'
 gem 'pg'
 gem 'rails_serve_static_assets'
 
-gem 'sass-rails',   '~> 3.2.3'
-gem 'coffee-rails', '~> 3.2.1'
-gem 'uglifier', '>= 1.0.3'
+gem 'sass-rails'
+gem 'coffee-rails'
+gem 'uglifier'
 gem 'jquery-rails'
 
 gem 'batman-rails'
 
 group :development do 
   gem 'better_errors'
-  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'rspec-rails'
 end
 
 # To use ActiveModel has_secure_password
